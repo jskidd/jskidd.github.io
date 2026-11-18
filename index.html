@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="John Kidd’s enterprise imaging portfolio. PACS, VNA, clinical interoperability, and resilient imaging workflows.">
+<meta name="theme-color" content="#101519">
+<meta property="og:type" content="website">
+<meta property="og:title" content="John Kidd | Enterprise Imaging Architect">
+<meta property="og:description" content="I make imaging systems work together so clinical teams can get the right study when they need it.">
+<title>John Kidd | Enterprise Imaging Architect</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101519'/%3E%3Cpath d='M18 27V18h9m10 0h9v9m0 10v9h-9m-10 0h-9v-9' stroke='%23d9ed9b' stroke-width='3' fill='none'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23d9ed9b'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#101519;--panel:#171e22;--ink:#f2f2ea;--soft:#aab8b9;--accent:#d9ed9b;--line:#354247;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+a:hover{color:var(--accent)}
+.skip{position:absolute;left:1rem;top:-5rem;background:var(--accent);color:#111714;padding:.6rem 1rem;z-index:5}
+.skip:focus{top:1rem;color:#111714}
+.shell{width:min(100% - 96px,1152px);margin-inline:auto}
+.eyebrow{font:600 .72rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+header{border-bottom:1px solid var(--line)}
+.topbar,footer .shell{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.topbar{min-height:76px}
+.brand{display:inline-flex;align-items:center;gap:.7rem;font-size:1rem;font-weight:700;letter-spacing:-.02em}
+.brand svg{color:var(--accent);width:30px;height:30px;flex:none}
+nav{display:flex;align-items:center;gap:clamp(.75rem,3vw,2rem);font-size:.87rem}
+nav a{color:var(--soft);display:inline-flex;align-items:center;min-height:44px}
+nav a:last-child{color:var(--ink);gap:.26rem}
+.arrow{width:1em;height:1em;flex:none;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+footer a{gap:.3rem}
+.hero{min-height:588px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:3.5rem;align-items:center;padding-block:4.6rem}
+.kicker{display:flex;gap:.75rem;align-items:center;margin:0 0 1.1rem}
+.kicker::before{content:"";display:block;width:20px;height:1px;background:var(--accent)}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-weight:650;letter-spacing:-.05em;line-height:1.03}
+h1{margin-bottom:1.4rem;font-size:clamp(3.25rem,6.25vw,6rem);max-width:11ch}
+h1 span{color:var(--accent)}
+.lede{color:var(--soft);max-width:46ch;font-size:clamp(1rem,1.5vw,1.2rem);margin-bottom:1.65rem}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;min-height:48px;padding:.65rem 1.05rem;background:var(--accent);color:#182016;font-weight:700;font-size:.9rem;border:1px solid transparent;border-radius:4px;transition:background .2s,color .2s}
+.button:hover{background:var(--ink);color:#182016}
+.station{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel);align-self:center;box-shadow:0 24px 60px #0003}
+.station-head,.station figcaption{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem;font:.66rem/1.4 var(--mono);letter-spacing:.065em;color:var(--soft);text-transform:uppercase}
+.station-head{border-bottom:1px solid var(--line)}
+.station-head span:first-child{display:flex;gap:.5rem;align-items:center;color:var(--ink)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;box-shadow:0 0 8px #d9ed9b77}
+.station figcaption{border-top:1px solid var(--line)}
+.station figcaption span:last-child{color:var(--accent)}
+.map{display:block;width:100%;height:auto;background:#12191e}
+.section{border-top:1px solid var(--line);padding-block:clamp(3.1rem,7vw,6rem);scroll-margin-top:1rem}
+.section-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(2rem,7vw,6rem)}
+.section-intro .eyebrow{margin-bottom:.85rem}
+h2{font-size:clamp(2.35rem,4.1vw,4rem);margin-bottom:1rem}
+.section-intro>p:last-child{max-width:33ch;color:var(--soft);margin-bottom:0}
+.rows{list-style:none;padding:0;margin:0}
+.row{display:grid;grid-template-columns:3rem 1fr;gap:.65rem;border-bottom:1px solid var(--line);padding:1.2rem 0}
+.row:first-child{border-top:1px solid var(--line)}
+.row .index{font:500 .75rem/1.65 var(--mono);color:var(--accent)}
+.row h3{font-size:1.32rem;line-height:1.18;margin:0 0 .45rem;letter-spacing:-.026em}
+.row p,.case p{margin:0;color:var(--soft);font-size:.96rem}
+.work-intro{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2rem}
+.work-intro h2{margin-bottom:0}
+.work-intro>p{margin:0;max-width:35ch;color:var(--soft)}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.case{padding:1.3rem 1.35rem 1.45rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;align-items:flex-start}
+.case .eyebrow{color:var(--accent);margin-bottom:2rem}
+.case h3{font-size:1.48rem;line-height:1.12;margin-bottom:.6rem;letter-spacing:-.035em}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.contact h2{max-width:19ch}
+.contact p:last-child{color:var(--soft);margin-bottom:0;max-width:54ch}
+.contact .button{flex:none}
+footer{border-top:1px solid var(--line);color:var(--soft);font-size:.8rem}
+footer .shell{padding-block:1.25rem}
+footer a{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:920px){.shell{width:min(100% - 64px,1152px)}.hero{gap:2rem;min-height:520px}}
+@media(max-width:720px){.shell{width:calc(100% - 40px)}.hero{grid-template-columns:1fr;min-height:0;padding-block:3.4rem;gap:2rem}h1{font-size:clamp(3rem,10vw,5.2rem)}.station{max-width:520px}.section-grid,.cases{grid-template-columns:1fr;gap:1.4rem}.work-intro,.contact{align-items:flex-start;flex-direction:column;gap:1rem}.case .eyebrow{margin-bottom:1rem}.contact .button{margin-top:.4rem}}
+@media(max-width:380px){.shell{width:calc(100% - 32px)}.brand{font-size:.9rem;gap:.35rem}nav{gap:.55rem;font-size:.78rem}.topbar{gap:.55rem;min-height:64px}.row{grid-template-columns:2rem 1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="topbar shell">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 11V4h7m10 0h7v7m0 10v7h-7m-10 0H4v-7" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="2.3" fill="currentColor"/></svg>
+      John Kidd
+    </a>
+    <nav aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#contact">Contact <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12l8-8M5 4h7v7"/></svg></a></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div>
+      <p class="kicker eyebrow">John Kidd / Cincinnati, OH</p>
+      <h1 id="hero-title">Enterprise Imaging <span>Architect.</span></h1>
+      <p class="lede">I make imaging systems work together so clinical teams can get the right study when they need it.</p>
+      <a class="button" href="#work">Explore my work <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10m-4-4 4 4 4-4"/></svg></a>
+    </div>
+    <figure class="station">
+      <div class="station-head" aria-hidden="true"><span><i class="status-dot"></i> Imaging workflow</span><span>System view</span></div>
+      <svg class="map" viewBox="0 0 432 333" role="img" aria-labelledby="map-title map-desc">
+        <title id="map-title">Illustrative imaging system topology</title>
+        <desc id="map-desc">Modalities and EHR orders connect to the PACS. Clinical viewers and a vendor-neutral archive connect to the PACS on the other side.</desc>
+        <defs>
+          <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" fill="none" stroke="#2b373d" stroke-width=".65"/></pattern>
+          <radialGradient id="halo"><stop stop-color="#9eb876" stop-opacity=".21"/><stop offset="1" stop-color="#9eb876" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="432" height="333" fill="url(#grid)"/>
+        <circle cx="216" cy="166" r="138" fill="url(#halo)"/>
+        <circle cx="216" cy="166" r="113" stroke="#3d514c" stroke-dasharray="2 7" fill="none"/>
+        <circle cx="216" cy="166" r="76" stroke="#496053" stroke-opacity=".65" fill="none"/>
+        <path d="M216 32v268M30 166h372" stroke="#3b4f4d" stroke-dasharray="3 6"/>
+        <g stroke="#aabd85" stroke-width="1.25" stroke-opacity=".83" fill="none">
+          <path d="M123 83h23l48 62M123 250h23l48-62M309 83h-23l-48 62M309 250h-23l-48-62"/>
+        </g>
+        <g fill="#d9ed9b"><circle cx="148" cy="86" r="2"/><circle cx="283" cy="87" r="2"/><circle cx="148" cy="246" r="2"/><circle cx="283" cy="246" r="2"/></g>
+        <g fill="#192329" stroke="#4b5e63">
+          <rect x="28" y="66" width="95" height="34" rx="4"/><rect x="28" y="233" width="95" height="34" rx="4"/>
+          <rect x="309" y="66" width="95" height="34" rx="4"/><rect x="309" y="233" width="95" height="34" rx="4"/>
+          <rect x="173" y="131" width="86" height="70" rx="8" fill="#27352c" stroke="#d9ed9b"/>
+        </g>
+        <g text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing=".6" fill="#e3e8e2">
+          <text x="75.5" y="87">MODALITY</text><text x="75.5" y="254">EHR ORDERS</text>
+          <text x="356.5" y="87">VIEWER</text><text x="356.5" y="254">VNA</text>
+          <text x="216" y="183" fill="#e4f3ba" font-size="12" font-weight="700">PACS</text>
+        </g>
+        <path d="M206 153v-5h5m10 0h5v5m0 5v5h-5m-10 0h-5v-5" stroke="#d9ed9b" stroke-width="1.25" fill="none"/>
+        <circle cx="216" cy="155.5" r="2" fill="#d9ed9b"/>
+        <g stroke="#6e8377" stroke-width="1" fill="none"><path d="M15 26V15h11m380 0h11v11m0 280v11h-11m-380 0H15v-11"/></g>
+      </svg>
+      <figcaption><span>Illustrative topology</span><span>DICOM · HL7</span></figcaption>
+    </figure>
+  </section>
+  <section id="expertise" class="section" aria-labelledby="expertise-title">
+    <div class="section-grid shell">
+      <div class="section-intro">
+        <p class="eyebrow">01 / Expertise</p>
+        <h2 id="expertise-title">I troubleshoot the workflow.</h2>
+        <p>I follow an exam from order and acquisition through storage, viewing, and reporting to find where the workflow actually breaks.</p>
+      </div>
+      <ul class="rows">
+        <li class="row"><span class="index" aria-hidden="true">01</span><div><h3>PACS &amp; VNA architecture</h3><p>Plan upgrades and system integrations around how clinicians acquire, retrieve, and view studies across environments.</p></div></li>
+        <li class="row"><span class="index" aria-hidden="true">02</span><div><h3>Clinical interoperability</h3><p>Connect modalities, EHRs, archives, viewers, and reporting systems using DICOM, HL7, and modality worklists.</p></div></li>
+        <li class="row"><span class="index" aria-hidden="true">03</span><div><h3>Operational reliability</h3><p>Trace performance and availability issues across application, infrastructure, and vendor boundaries. Validate contingency workflows before teams need them.</p></div></li>
+      </ul>
+    </div>
+  </section>
+  <section id="work" class="section" aria-labelledby="work-title">
+    <div class="shell">
+      <div class="work-intro">
+        <div><p class="eyebrow">02 / Experience</p><h2 id="work-title">Selected work</h2></div>
+        <p>Three examples from multi-vendor imaging environments.</p>
+      </div>
+      <div class="cases">
+        <article class="case"><p class="eyebrow">01 / Performance</p><h3>Tracing a slow PACS login</h3><p>Followed a login delay beyond the application and isolated endpoint security scanning as the source of the slowdown.</p></article>
+        <article class="case"><p class="eyebrow">02 / Resilience</p><h3>Rerouting imaging studies</h3><p>Worked on rerouting imaging traffic through an alternate path, paying attention to the handoffs that determine whether studies reach the intended destination.</p></article>
+        <article class="case"><p class="eyebrow">03 / Modernization</p><h3>Aligning PACS environments</h3><p>Worked on version alignment and bringing contingency worklists into a test environment so the team could validate workflows before rollout.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="contact shell">
+      <div>
+        <p class="eyebrow">03 / Connect</p>
+        <h2 id="contact-title">What imaging workflow are you working on?</h2>
+        <p>I’m interested in how health systems modernize imaging and make it more reliable for the people who use it every day.</p>
+      </div>
+      <a class="button" href="https://www.linkedin.com/in/john-kidd-11b71b315/">Connect on LinkedIn <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12l8-8M5 4h7v7"/></svg></a>
+    </div>
+  </section>
+</main>
+<footer><div class="shell"><span>John Kidd · Enterprise Imaging Architect</span><a href="https://github.com/jskidd">GitHub <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12l8-8M5 4h7v7"/></svg></a></div></footer>
+</body>
+</html>
